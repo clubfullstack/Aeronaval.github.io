@@ -61,7 +61,7 @@ const Header: React.FC = () => {
             {navLinks.map((link: { id: string; title: string }) => (
               <li
                 key={link.id}
-                className={`${HeaderStyles.navLink} ${scrolling ? 'text-blue-950' : 'text-white'} ${TextStyles.paragraph}`}
+                className={`font-square ${HeaderStyles.navLink} ${scrolling ? 'text-blue-950' : 'text-white'} ${TextStyles.paragraph}`}
               >
                 <button
                   onClick={() => handleNavClick(link.id)}

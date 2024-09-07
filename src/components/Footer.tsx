@@ -1,20 +1,20 @@
 import React from 'react';
-import InstagramIcon from '../assets/instagram-icon.png';
+// import InstagramIcon from '../assets/instagram-icon.png';
 import LinkedinIcon from '../assets/linkedin-icon.png';
 import { SectionWrapper } from '../hoc';
-import { FooterStyles, TextStyles } from '../styles/styles'; // Ajuste o caminho conforme necessário
+import { FooterStyles, TextStyles } from '../styles/styles';
 
 const Footer: React.FC = () => {
   return (
     <footer className={FooterStyles.footer}>
       <div className={FooterStyles.flexContainer}>
         <div className={FooterStyles.leftColumn}>
-          <h3 className={`lg:text-[20] ${TextStyles.subTitle}`}>Brasil</h3>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.paragraph}`}>Praça Marechal-do-Ar Eduardo Gomes, 50</p>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.paragraph}`}>Campus DCTA, Incubaero</p>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.paragraph}`}>São José dos Campos - SP Brasil</p>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.paragraph}`}>Telefone: (19) 99997-9575</p>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.paragraph}`}>
+          <h3 className={`lg:text-[20] ${TextStyles.paragraph}`}>Brasil</h3>
+          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>Praça Marechal-do-Ar Eduardo Gomes, 50</p>
+          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>Campus DCTA, Incubaero</p>
+          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>São José dos Campos - SP Brasil</p>
+          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>Telefone: (19) 99997-9575</p>
+          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>
             Email: <a href="mailto:felipedavila@aeronaval.org" className={FooterStyles.emailLink}>felipedavila@aeronaval.org</a>
           </p>
         </div>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
           <p className={FooterStyles.footerText}>© Aeronaval - Todos os direitos reservados.</p>
         </div>
 
-        <div className={FooterStyles.rightColumn}>
+        {/* <div className={FooterStyles.rightColumn}>
           <h3 className={FooterStyles.contactTitleRight}>Entre em contato</h3>
           <form className={FooterStyles.form}>
             <div className="flex-grow flex items-center">
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'square': ['Roboto Condensed', 'sans-serif'], // Ou outra fonte de sua preferência
+        'square': ['Roboto Condensed', 'Tomorrow', 'sans-serif'], // Ou outra fonte de sua preferência
       },
     },
   },

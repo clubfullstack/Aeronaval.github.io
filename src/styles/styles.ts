@@ -1,6 +1,6 @@
   const HeaderStyles = {
     header: "p-4 w-full fixed top-0 left-0 z-50 transition-all duration-300",
-    background: "bg-gradient-to-r from-[#1F316F] via-[#1A4870] to-white",
+    background: "bg-gradient-to-r from-[#040712] via-[#111b3f] to-white",
     scrollBackground: "bg-white shadow-md",
     hidden: "hidden",
     visible: "block",
@@ -14,18 +14,26 @@
 
   const HomeStyles = {
     container: "relative w-full h-screen overflow-hidden mt-10",
-    background: "background",
-    content: "relative z-10 flex flex-col items-center justify-center w-full h-full p-8 bg-gradient-to-b from-transparent to-[#020C30]",
+    background: "absolute inset-0 bg-no-repeat bg-cover bg-center",
+    content: "mt-24 relative z-10 flex flex-col items-center w-full h-full p-8 bg-gradient-to-b from-transparent to-[#020C30]",
     heading: "text-4xl font-bold text-white text-center",
     paragraph: "text-lg text-white mt-7 max-w-6xl text-center",
-    logo: "mt-10 h-80",
+    logo: "mt-56 h-80",
   };
 
+  const AboutStyles = {
+      container: "bg-gradient-to-b from-[#000721] via-[#1F316F] to-[#000721] relative w-full h-screen overflow-hidden",
+      content: "mt-6 relative z-10 flex flex-col items-center w-full h-full p-8 ",
+      heading: "text-4xl font-bold text-white text-center",
+      paragraph: "text-lg text-white mt-7 max-w-6xl text-center",
+      logo: "mt-20 h-80",
+  };
+  
   const CardStyles = {
     container: "bg-[#284784] bg-opacity-70 p-8 rounded-lg max-w-7xl w-full relative",
     text: "text-white mb-8",
     strong: "text-2xl",
-    logo: "bottom-4 left-4 h-64",
+    logo: "bottom-4 left-4 h-72",
   };
   
   const ServicesStyles = {
@@ -33,20 +41,25 @@
     background: (imageUrl: string) => `url(${imageUrl})`,
     backgroundStyle: "backgroundSize: cover; backgroundPosition: center; filter: brightness(0.9) contrast(1.1)",
     titleContainer: "absolute top-8 w-full flex justify-center",
-    title: "font-bold text-white mt-10",
-    card: CardStyles, // Reutiliza a estilização do card
+    card: CardStyles,
+    backgroundLayer: "absolute inset-0 z-[-1]",
+    dividerTop: "absolute top-0 left-0 w-full h-[10px] bg-[#000721] z-10",
+    dividerBottom: "absolute bottom-0 left-0 w-full h-[10px] bg-[#000721] z-10",
   };
   
   const ProjectCardStyles = {
     container: "relative rounded-3xl overflow-hidden w-full max-w-[800px] h-[700px] flex items-center justify-center",
-    image: "absolute inset-0 w-full h-full object-cover z-0",
+    image: "absolute inset-0 w-full h-full object-cover z-0 blur-[1.5px]",
     textContainer: "absolute top-4 left-4 bg-black bg-opacity-60 p-4 rounded-lg text-white z-10 max-w-[85%]",
     title: "font-bold text-[24px]",
     description: "mt-2 text-[16px]",
+    iconsContainer: "absolute bottom-10 left-4 flex flex-wrap  w-full mt-4 z-10 space-x-4",
+    icon: "w-28 h-28 p-0.5 bg-white rounded-full flex justify-center items-center transition-transform transform hover:scale-110 hover:translate-x-1 duration-300 ease-in-out drop-shadow-2xl ",
+    iconLabel: "text-sm mt-2 text-white",
   };
   
   const ProjectsStyles = {
-    container: "bg-gradient-to-b from-[#001254] via-[#1F316F] to-[#000721] py-20",
+    container: "bg-gradient-to-b from-[#000721] via-[#1F316F] to-[#000721] py-20",
     titleContainer: "w-full flex justify-center mb-10",
     title: "font-bold text-white text-4xl",
     projectsList: "flex flex-wrap justify-center gap-10",
@@ -71,10 +84,21 @@
   };
 
   const TextStyles = {
-    title: "font-square font-black lg:text-[60px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
-    subTitle: "font-square font-semibold lg:text-[35px] sm:text-[40px] xs:text-[35px] text-[30px] lg:leading-[60px] mt-2",
-    paragraph: "font-square font-medium lg:text-[25px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[31px]",
+    title: "font-bold font-square lg:text-[60px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]",
+    subTitle: "font-square font-semibold lg:text-[35px] sm:text-[40px] xs:text-[35px] text-[30px] lg:leading-[60px]",
+    paragraph: "font-medium lg:text-[21px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[31px]",
+    smallParagraph: "font-square font-medium lg:text-[20px] sm:text-[20px] xs:text-[18px] text-[14px] lg:leading-[31px]",
+  };
+
+  const ContactStyles = {
+    container: "bg-[#182d5e] bg-opacity-80 max-w-2xl mx-auto p-6 rounded-lg shadow-lg",
+    form: "flex flex-col space-y-4",
+    formGroup: "flex flex-col",
+    label: "text-lg self-start font-semibold text-white mb-1 ml-2",
+    input: "p-3 m-1 border border-[#26375b] rounded bg-gray-300 focus:outline-none focus:ring-2 focus:[#2a4884]",
+    textarea: "p-3 m-1 border border-[#26375b] bg-gray-300 rounded resize-none h-32 focus:outline-none focus:ring-2 focus:[#2a4884]",
+    button: "self-center mt-4 p-2 w-full bg-[#001863] text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500",
   };
   
-  export { HeaderStyles, HomeStyles, ServicesStyles, CardStyles, ProjectCardStyles, ProjectsStyles, FooterStyles, TextStyles };
+  export { HeaderStyles, HomeStyles, ServicesStyles, CardStyles, ProjectCardStyles, ProjectsStyles, FooterStyles, TextStyles, ContactStyles, AboutStyles };
   

@@ -22,6 +22,7 @@ const Projects: React.FC = () => {
             name={project.name}
             description={project.description}
             imgUrl={project.imgUrl}
+            icons={project.icons}
           />
         ))}
       </div>
