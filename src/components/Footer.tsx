@@ -9,12 +9,12 @@ const Footer: React.FC = () => {
     <footer className={FooterStyles.footer}>
       <div className={FooterStyles.flexContainer}>
         <div className={FooterStyles.leftColumn}>
-          <h3 className={`lg:text-[20] ${TextStyles.paragraph}`}>Brasil</h3>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>Praça Marechal-do-Ar Eduardo Gomes, 50</p>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>Campus DCTA, Incubaero</p>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>São José dos Campos - SP Brasil</p>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>Telefone: (19) 99997-9575</p>
-          <p className={`lg:text-[18px] lg:leading-[25px] ${TextStyles.smallParagraph}`}>
+          <h3 className={`lg:text-[20] text-center ${TextStyles.paragraph}`}>Brasil</h3>
+          <p className={`lg:text-[18px] lg:leading-[25px] text-center ${TextStyles.smallParagraph}`}>Praça Marechal-do-Ar Eduardo Gomes, 50</p>
+          <p className={`lg:text-[18px] lg:leading-[25px] text-center ${TextStyles.smallParagraph}`}>Campus DCTA, Incubaero</p>
+          <p className={`lg:text-[18px] lg:leading-[25px] text-center ${TextStyles.smallParagraph}`}>São José dos Campos - SP Brasil</p>
+          <p className={`lg:text-[18px] lg:leading-[25px] text-center ${TextStyles.smallParagraph}`}>Telefone: (19) 99997-9575</p>
+          <p className={`lg:text-[18px] lg:leading-[25px] text-center ${TextStyles.smallParagraph}`}>
             Email: <a href="mailto:felipedavila@aeronaval.org" className={FooterStyles.emailLink}>felipedavila@aeronaval.org</a>
           </p>
         </div>

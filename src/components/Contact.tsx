@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-b from-[#000721] to-[#000721]">
-        <h1 className={TextStyles.title}>Fale Conosco</h1>
+        <h1 className={`text-center ${TextStyles.title}`}>Fale Conosco</h1>
       <div className={ContactStyles.container}>
         <form onSubmit={handleSubmit} className={ContactStyles.form}>
           <div className={ContactStyles.formGroup}>

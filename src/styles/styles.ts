@@ -27,17 +27,18 @@
       heading: "text-4xl font-bold text-white text-center",
       paragraph: "text-lg text-white mt-7 max-w-6xl text-center",
       logo: "mt-20 h-80",
+      justifiedText: "text-justify max-w-[1700px] text-left"
   };
   
   const CardStyles = {
     container: "bg-[#284784] bg-opacity-70 p-8 rounded-lg max-w-7xl w-full relative",
-    text: "text-white mb-8",
+    text: "text-black mb-8",
     strong: "text-2xl",
-    logo: "bottom-4 left-4 h-72",
+    logo: "bottom-4 left-4 h-72 mt-5",
   };
   
   const ServicesStyles = {
-    section: "relative w-full h-screen bg-cover bg-center",
+    section: "relative w-full  bg-cover bg-center",
     background: (imageUrl: string) => `url(${imageUrl})`,
     backgroundStyle: "backgroundSize: cover; backgroundPosition: center; filter: brightness(0.9) contrast(1.1)",
     titleContainer: "absolute top-8 w-full flex justify-center",
@@ -45,24 +46,29 @@
     backgroundLayer: "absolute inset-0 z-[-1]",
     dividerTop: "absolute top-0 left-0 w-full h-[10px] bg-[#000721] z-10",
     dividerBottom: "absolute bottom-0 left-0 w-full h-[10px] bg-[#000721] z-10",
+    textContainer: "max-w-[1000px] text-justify",
   };
-  
+
   const ProjectCardStyles = {
-    container: "relative rounded-3xl overflow-hidden w-full max-w-[800px] h-[700px] flex items-center justify-center",
+    container: "relative rounded-3xl overflow-hidden w-full max-w-[850px] h-auto flex flex-col items-center justify-between",
     image: "absolute inset-0 w-full h-full object-cover z-0 blur-[1.5px]",
-    textContainer: "absolute top-4 left-4 bg-black bg-opacity-60 p-4 rounded-lg text-white z-10 max-w-[85%]",
+    textContainer: "relative bg-black bg-opacity-60 p-4 rounded-lg text-white z-10 max-w-[85%] mb-10 mt-3",
     title: "font-bold text-[24px]",
     description: "mt-2 text-[16px]",
-    iconsContainer: "absolute bottom-10 left-4 flex flex-wrap  w-full mt-4 z-10 space-x-4",
-    icon: "w-28 h-28 p-0.5 bg-white rounded-full flex justify-center items-center transition-transform transform hover:scale-110 hover:translate-x-1 duration-300 ease-in-out drop-shadow-2xl ",
-    iconLabel: "text-sm mt-2 text-white",
+    iconsContainer: "relative flex flex-wrap gap-4 mt-8 z-10 mb-4",
   };
-  
+
   const ProjectsStyles = {
     container: "bg-gradient-to-b from-[#000721] via-[#1F316F] to-[#000721] py-20",
     titleContainer: "w-full flex justify-center mb-10",
     title: "font-bold text-white text-4xl",
     projectsList: "flex flex-wrap justify-center gap-10",
+
+    hoverSection: {
+      container: "w-full max-w-[1100px] bg-white bg-opacity-10 rounded-lg p-8 mb-10 mx-auto", // Estilo geral do card
+      title: "font-bold text-white text-3xl mb-4",
+      paragraph: "text-white text-lg leading-relaxed",
+    },
   };
 
   const FooterStyles = {
@@ -91,7 +97,7 @@
   };
 
   const ContactStyles = {
-    container: "bg-[#182d5e] bg-opacity-80 max-w-2xl mx-auto p-6 rounded-lg shadow-lg",
+    container: "bg-black max-w-2xl mx-auto p-10 rounded-lg shadow-lg",
     form: "flex flex-col space-y-4",
     formGroup: "flex flex-col",
     label: "text-lg self-start font-semibold text-white mb-1 ml-2",

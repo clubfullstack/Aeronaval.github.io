@@ -2,7 +2,7 @@ interface Project {
     name: string;
     description: string;
     imgUrl: string;
-    icons: { img: string; label: string }[];
+    icons: {icon: string, label: string}[];
 }
 
 interface Navlink {
@@ -24,35 +24,35 @@ export const projects: Project[] = [
       description:
         "O ANV-PAX é um hovercraft projetado para o transporte de passageiros e carga, com capacidade de 2700 kg. Com um suporte logístico cuidadosamente planejado, ele oferece versatilidade, robustez, segurança e alta disponibilidade para operadores que buscam expandir seus negócios. Sua estrutura foi desenvolvida para atender às exigências das Normas da Autoridade Marítima, integrando soluções consagradas nos setores naval e aeroespacial.",
       imgUrl: "src/assets/hovercraft-bg-2.jpeg",
-      icons: [
-        { img: "src/assets/hovercraft-icon.png", label: "Velicidade"},
-        { img: "src/assets/maintenance-icon.png", label: "Manutençaõ"},
-        { img: "src/assets/accessibility-icon.png", label: "Acessibilidade"},
-        { img: "src/assets/clipboard-icon.png", label: "Multiemprego"},
+      icons : [
+        {icon: "src/assets/hovercraft-icon.png", label: "Velocidade"},
+        {icon: "src/assets/maintenance-icon.png", label: "Facilidade de Manutenção"},
+        {icon: "src/assets/accessibility-icon.png", label: "Acessibilidade"},
+        {icon: "src/assets/clipboard-icon.png", label: "Muiltiemprego"},
       ]
     },
     {
         name:"ANV-SAR",
-        description: "Para atender às necessidades das equipes de resgate dos Corpos de Bombeiros, desenvolvemos o ANV-SAR, um hovercraft com características únicas no mundo, destacando-se por sua modularidade e portabilidade. Essa solução oferece maior facilidade de transporte e garante segurança aos operadores em cenários desafiadores, como enchentes e rompimento de barragens de rejeitos, proporcionando uma resposta ágil e eficaz em situações críticas.",
+        description: "O ANV-SAR é um hovercraft inovador, projetado para equipes de resgate dos Corpos de Bombeiros, oferecendo modularidade e portabilidade excepcionais. Ideal para situações críticas como enchentes e rompimentos de barragens, ele proporciona transporte fácil e segurança máxima, garantindo uma resposta ágil e eficaz em em situações críticas e emergenciais.",
         imgUrl: "src/assets/hovercraft-bg.jpeg",
         icons: [
-            { img: "src/assets/modularity-icon.png", label: "Modularidade"},
-            { img: "src/assets/forklift-icon.png", label: "Facilidade de transporte"},
-            { img: "src/assets/security-icon.png", label: "Robustez e Segurança"},
-            { img: "src/assets/clipboard-icon.png", label: "Multiemprego"},
-            { img: "src/assets/resgate.png", label: "Resgate"},
-            { img: "src/assets/earth-icon.png", label: "Turismo Náutico"},
-            { img: "src/assets/siren-icon.png", label: "Patrulhamento de Difícil Acesso"},
-          ]
+          {icon: "src/assets/modularity-icon.png", label: "Modularidade"},
+          {icon: "src/assets/forklift-icon.png", label: "Facilidade de Transporte"},
+          {icon: "src/assets/security-icon.png", label: "Robustez e Segurança"},
+          {icon: "src/assets/clipboard-icon.png", label: "Muiltiemprego"},
+          {icon: "src/assets/resgate.png", label: "Resgate"},
+          {icon: "src/assets/earth-icon.png", label: "Turismo Náutico"},
+          {icon: "src/assets/siren-icon.png", label: "Patrulhamento"},
+        ]
     },
     {
         name:"Tecido tecnológico PlasmaTex",
-        description: "Doenças transmitidas por mosquitos, como a dengue, são um problema crescente no Brasil e no mundo. Para enfrentar isso, estamos desenvolvendo uma solução inovadora e sustentável, usando tecnologia de plasma frio para incorporar repelentes em tecidos. Esses materiais tratados oferecem proteção prática e eficiente, podendo ser usados em roupas esportivas, uniformes, fardas entre outros. Além de atender a setores de defesa e civil, nosso objetivo estratégico é avançar na pesquisa de plasmas, com o intuito de aplicar essa tecnologia futuramente em projetos aeroespaciais.",
+        description: "Doenças transmitidas por mosquitos, como a dengue, são um problema crescente no Brasil e no mundo. A Aeronaval está revolucionando a proteção contra doenças transmitidas por mosquitos, com uma tecnologia de plasma frio que incorpora repelentes diretamente em tecidos. Esses materiais tratados oferecem uma defesa eficaz e prática para roupas esportivas, uniformes e fardas. Além de atender setores de defesa e civil, estamos impulsionando a inovação para futuras aplicações aeroespaciais.",
         imgUrl: "src/assets/fabric-bg.jpg",
         icons: [
-            { img: "src/assets/shirt-icon.png", label: "Vestuário Inovador"},
-            { img: "src/assets/mesh-icon.png", label: " Tecido com Propriedades Diversas"},
-            { img: "src/assets/factory-icon.png", label: "Sustentabilidade na Produção"},
-          ]
+          {icon: "src/assets/shirt-icon.png", label: "Vestuário Inovador"},
+          {icon: "src/assets/mesh-icon.png", label: "Tecido Tecnológico"},
+          {icon: "src/assets/factory-icon.png", label: "Sustentabilidade"},
+        ]
     },
-]
+];

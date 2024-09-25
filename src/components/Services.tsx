@@ -18,15 +18,15 @@ const Services: React.FC = () => {
         }}
       ></div>
 
+            <h1 className={`text-center ${TextStyles.title}`}>Serviços</h1>
       <div className="relative flex items-center justify-center w-full h-full p-8">
         <div className={ServicesStyles.card.container}>
-          <p className={TextStyles.paragraph}>
-            <strong className={TextStyles.title}>Serviços</strong>
+          <p className={`${TextStyles.paragraph} ${ServicesStyles.textContainer}`}>
+            <strong className={TextStyles.subTitle}>Aeroespacial</strong>
             <br />
             <br />
-            O projeto do Veículo Lançador de Pequeno Porte (VLPP) é uma iniciativa estratégica, financiada pela Financiadora de Estudos e Projetos (Finep) e coordenada pela Agência Espacial Brasileira (AEB). Com o objetivo de desenvolver um microlançador capaz de colocar pequenos satélites em órbita, o VLPP busca atender às crescentes demandas do mercado espacial por soluções de baixo custo e alta eficiência. Esse projeto marca um avanço significativo na autonomia do Brasil no setor aeroespacial, inserindo o país de forma competitiva no cenário global de lançamentos espaciais. Alinhado à política nacional de desenvolvimento científico e tecnológico, o VLPP também fortalece a capacidade industrial e inovadora do Brasil.
-Com grande satisfação, a Aeronaval tem contribuído com este empreendimento de extrema importância para o país. Atualmente, a Aeronaval participa ativamente no desenvolvimento do ferramental necessário para a fabricação dos motores de combustível sólido do projeto do Microlançador Brasileiro (ML-BR). Esse ferramental é crucial, pois dele depende a confiabilidade operacional do foguete. Ele deve garantir a repetibilidade na produção, a eficiência e a eficácia nos lançamentos, além de atender aos rigorosos padrões de segurança.
-
+            O Veículo Lançador de Pequeno Porte (VLPP), apoiado e financiado pela Financiadora de Estudos e Projetos (Finep) e coordenado pela Espacial Brasileira (AEB), é um microlançador inovador, projetado para colocar pequenos satélites em órbita com baixo custo e alta eficiência. Este projeto estratégico não só fortalece a autonomia do Brasil no setor aeroespacial, mas também posiciona o país de forma competitiva no mercado global de lançamentos espaciais, alinhando-se com a política nacional de desenvolvimento tecnológico e impulsionando a capacidade industrial e inovadora do Brasil.
+            A Aeronaval orgulha-se de sua participação essencial no projeto do Microlançador Brasileiro (ML-BR). Estamos desenvolvendo o ferramental crítico para a fabricação dos motores de combustível sólido, garantindo a confiabilidade e a eficiência dos lançamentos. Nosso trabalho assegura alta repetibilidade na produção e atende aos rigorosos padrões de segurança, contribuindo significativamente para o sucesso do projeto.
           </p>
           <img
             src={LogoMlbr}
