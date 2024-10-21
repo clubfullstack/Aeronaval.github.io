@@ -8,12 +8,17 @@ import { ProjectsStyles, TextStyles } from "../styles/styles";
 const Projects: React.FC = () => {
   const { isMobile } = useDeviceType();
 
-  // Estado para controlar a visibilidade do card
+  // Estados para controlar a visibilidade dos cards
   const [isHovercraftVisible, setHovercraftVisible] = useState(false);
+  const [isPlasmaTexVisible, setPlasmaTexVisible] = useState(false); // Novo estado para PlasmaTex
 
-  // Função para alternar a visibilidade do card
+  // Funções para alternar a visibilidade dos cards
   const toggleHovercraftVisibility = () => {
     setHovercraftVisible(!isHovercraftVisible);
+  };
+
+  const togglePlasmaTexVisibility = () => {
+    setPlasmaTexVisible(!isPlasmaTexVisible); // Alterna a visibilidade do PlasmaTex
   };
 
   return (
@@ -43,6 +48,8 @@ const Projects: React.FC = () => {
         </div>
       )}
 
+
+
       <div className={`${ProjectsStyles.projectsList} ${isMobile ? 'flex-col items-center' : 'flex-row justify-center'}`}>
         {projects.map((project, index) => (
           <ProjectCard
@@ -54,6 +61,23 @@ const Projects: React.FC = () => {
           />
         ))}
       </div>
+            {/* Título PlasmaTex que funciona como um botão */}
+      <button
+        onClick={togglePlasmaTexVisibility}
+        className={`${TextStyles.subTitle} cursor-pointer mt-2 ml-4`}>
+        PlasmaTex
+      </button>
+
+      {/* Exibe o card com o texto sobre PlasmaTex se o estado for true */}
+      {isPlasmaTexVisible && (
+        <div className={ProjectsStyles.hoverSection.container}>
+          <p className={ProjectsStyles.hoverSection.paragraph}>
+            PlasmaTex é um projeto inovador que visa desenvolver uma nova geração de materiais texturizados utilizando tecnologia de plasma. Esses materiais oferecem propriedades únicas, como alta resistência a impactos e resistência a condições ambientais extremas.
+            <br /><br />
+            A Aeronaval está explorando aplicações do PlasmaTex em setores como moda, transporte e proteção pessoal, visando não apenas a funcionalidade, mas também a estética e o conforto dos produtos finais. Com PlasmaTex, buscamos redefinir o que é possível em design e engenharia de materiais.
+          </p>
+        </div>
+      )}
     </div>
   );
 };

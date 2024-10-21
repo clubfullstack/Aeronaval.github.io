@@ -1,16 +1,18 @@
-  const HeaderStyles = {
-    header: "p-4 w-full fixed top-0 left-0 z-50 transition-all duration-300",
-    background: "bg-gradient-to-r from-[#040712] via-[#111b3f] to-white",
-    scrollBackground: "bg-white shadow-md",
-    hidden: "hidden",
-    visible: "block",
-    logo: "h-12",
-    mobileMenuButton: "inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200",
-    menuIcon: "w-5 h-5",
-    navList: "font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8",
-    navLink: "text-[18px] font-medium cursor-pointer hover:text-[#55679C]",
-    logoLetter: "h-10",
-  };
+const HeaderStyles = {
+  header: "p-4 w-full fixed top-0 left-0 z-50 transition-all duration-300",
+  background: "bg-gradient-to-r from-[#040712] via-[#111b3f] to-white",
+  scrollBackground: "bg-white shadow-md",
+  hidden: "hidden",
+  visible: "block",
+  logo: "h-12",
+  mobileMenuButton: "inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200",
+  menuIcon: "w-5 h-5",
+  navList: "font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8",
+  navLink: "text-[18px] font-medium cursor-pointer hover:text-[#55679C]",
+  logoLetter: "h-10",
+  mobileMenuOverlay: "fixed inset-x-0 top-0 bottom-0 bg-black bg-opacity-50",
+};
+
 
   const HomeStyles = {
     container: "relative w-full h-screen overflow-hidden mt-10",
@@ -22,7 +24,7 @@
   };
 
   const AboutStyles = {
-      container: "bg-gradient-to-b from-[#000721] via-[#1F316F] to-[#000721] relative w-full h-screen overflow-hidden",
+      container: "bg-gradient-to-b from-[#000721] via-[#1F316F] to-[#000721] relative w-full overflow-hidden",
       content: "mt-6 relative z-10 flex flex-col items-center w-full h-full p-8 ",
       heading: "text-4xl font-bold text-white text-center",
       paragraph: "text-lg text-white mt-7 max-w-6xl text-center",
@@ -38,7 +40,7 @@
   };
   
   const ServicesStyles = {
-    section: "relative w-full  bg-cover bg-center",
+    section: "relative w-full bg-cover bg-center pt-10",
     background: (imageUrl: string) => `url(${imageUrl})`,
     backgroundStyle: "backgroundSize: cover; backgroundPosition: center; filter: brightness(0.9) contrast(1.1)",
     titleContainer: "absolute top-8 w-full flex justify-center",
