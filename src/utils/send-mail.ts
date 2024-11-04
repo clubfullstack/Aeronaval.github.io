@@ -27,10 +27,10 @@ export const handleSubmit = (
  // https://www.emailjs.com/docs/
 
  send(
-  '',  // Service ID
-  '', // Template ID
+  'service_poh0z4m',  // Service ID
+  'template_1vnm85q', // Template ID
   formValues, // Values to be sent
-  '' // Public key from emailJS
+  'HkpAl6CvxAIoTzRl5' // Public key from emailJS
  )
   .then((response: any) => {
     console.log('Email successfully sent!', response.status, response.text);

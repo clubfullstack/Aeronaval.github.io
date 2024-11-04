@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import About from './components/About';
 import TechInfo from './components/TechInfo';
+import ConsultingDetails from './components/ConsultingDetails';
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
       <main>
           <Home idName="home"/>
           <About idName="about" />
-          <Services idName="services" />
           <Projects idName="projects" />
           {/* <TechInfo idName="techInfo" /> */}
+          <Services idName="services" />
+          <ConsultingDetails idName="consulting" />
           <Contact idName="contact" />
           <Footer idName="footer" />
       </main>

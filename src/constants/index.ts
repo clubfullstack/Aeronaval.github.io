@@ -16,6 +16,7 @@ export const navLinks: Navlink[] = [
     {id: "services", title: "Serviços"},
     {id: "projects", title: "Projetos"},
     {id: "contact", title: "Contato"},
+    {id: "consulting", title: "Consultoria"},
 ];
 
 export const projects: Project[] = [
@@ -25,8 +26,8 @@ export const projects: Project[] = [
         "O ANV-PAX é um hovercraft projetado para o transporte de passageiros e carga, com capacidade de 2700 kg. Com um suporte logístico cuidadosamente planejado, ele oferece versatilidade, robustez, segurança e alta disponibilidade para operadores que buscam expandir seus negócios. Sua estrutura foi desenvolvida para atender às exigências das Normas da Autoridade Marítima, integrando soluções consagradas nos setores naval e aeroespacial.",
       imgUrl: "src/assets/hovercraft-bg-2.jpeg",
       icons : [
-        {icon: "src/assets/hovercraft-icon.png", label: "Velocidade"},
-        {icon: "src/assets/maintenance-icon.png", label: "Facilidade de Manutenção"},
+        {icon: "src/assets/speed-icon.png", label: "Velocidade"},
+        {icon: "src/assets/maintenance-icon.png", label: "Manutenibilidade"},
         {icon: "src/assets/accessibility-icon.png", label: "Acessibilidade"},
         {icon: "src/assets/clipboard-icon.png", label: "Muiltiemprego"},
       ]
@@ -37,8 +38,8 @@ export const projects: Project[] = [
         imgUrl: "src/assets/hovercraft-bg.jpeg",
         icons: [
           {icon: "src/assets/modularity-icon.png", label: "Modularidade"},
-          {icon: "src/assets/forklift-icon.png", label: "Facilidade de Transporte"},
-          {icon: "src/assets/security-icon.png", label: "Robustez e Segurança"},
+          {icon: "src/assets/forklift-icon.png", label: "Portabilidade"},
+          {icon: "src/assets/security-icon.png", label: "Segurança"},
           {icon: "src/assets/clipboard-icon.png", label: "Muiltiemprego"},
           {icon: "src/assets/resgate.png", label: "Resgate"},
           {icon: "src/assets/earth-icon.png", label: "Turismo Náutico"},

@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
 
   // Estados para controlar a visibilidade dos cards
   const [isHovercraftVisible, setHovercraftVisible] = useState(false);
-  const [isPlasmaTexVisible, setPlasmaTexVisible] = useState(false); // Novo estado para PlasmaTex
+  const [isPlasmaTexVisible, setPlasmaTexVisible] = useState(false);
 
   // Funções para alternar a visibilidade dos cards
   const toggleHovercraftVisibility = () => {
@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
   };
 
   const togglePlasmaTexVisibility = () => {
-    setPlasmaTexVisible(!isPlasmaTexVisible); // Alterna a visibilidade do PlasmaTex
+    setPlasmaTexVisible(!isPlasmaTexVisible);
   };
 
   return (
@@ -29,12 +29,14 @@ const Projects: React.FC = () => {
         </h1>
       </div>
 
-      {/* Título Hovercraft que funciona como um botão */}
+      {/* Botão para Hovercraft */}
+    <div className={ProjectsStyles.buttonContainer}>
       <button
         onClick={toggleHovercraftVisibility}
-        className={`${TextStyles.subTitle} cursor-pointer mb-2 ml-4`}>
+        className={`${ProjectsStyles.toggleButton}`}>
         Hovercraft
       </button>
+    </div>
 
       {/* Exibe o card com o texto sobre Hovercraft se o estado for true */}
       {isHovercraftVisible && (
@@ -50,6 +52,7 @@ const Projects: React.FC = () => {
 
 
 
+      {/* Lista dos projetos */}
       <div className={`${ProjectsStyles.projectsList} ${isMobile ? 'flex-col items-center' : 'flex-row justify-center'}`}>
         {projects.map((project, index) => (
           <ProjectCard
@@ -57,16 +60,19 @@ const Projects: React.FC = () => {
             name={project.name}
             description={project.description}
             imgUrl={project.imgUrl}
-            icons={project.icons} // Passa os ícones aqui
+            icons={project.icons}
           />
         ))}
       </div>
-            {/* Título PlasmaTex que funciona como um botão */}
+      
+            {/* Botão para PlasmaTex */}
+    <div className={ProjectsStyles.buttonContainer}>
       <button
         onClick={togglePlasmaTexVisibility}
-        className={`${TextStyles.subTitle} cursor-pointer mt-2 ml-4`}>
+        className={`${ProjectsStyles.toggleButton} mb-2 ml-4`}>
         PlasmaTex
       </button>
+    </div>  
 
       {/* Exibe o card com o texto sobre PlasmaTex se o estado for true */}
       {isPlasmaTexVisible && (

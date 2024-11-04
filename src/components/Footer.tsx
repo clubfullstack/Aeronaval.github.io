@@ -1,6 +1,6 @@
 import React from 'react';
 // import InstagramIcon from '../assets/instagram-icon.png';
-import LinkedinIcon from '../assets/linkedin-icon.png';
+// import LinkedinIcon from '../assets/linkedin-icon.png';
 import { SectionWrapper } from '../hoc';
 import { FooterStyles, TextStyles } from '../styles/styles';
 
@@ -20,14 +20,14 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={FooterStyles.centerColumn}>
-          <div className={FooterStyles.socialIcons}>
+          {/* <div className={FooterStyles.socialIcons}>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
               <img src={LinkedinIcon} alt="LinkedIn" className={FooterStyles.socialIcon} />
             </a>
-            {/* <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               <img src={InstagramIcon} alt="Instagram" className={FooterStyles.socialIcon} />
-            </a> */}
-          </div>
+            </a>
+          </div> */}
           <p className={FooterStyles.footerText}>© Aeronaval - Todos os direitos reservados.</p>
         </div>
 
