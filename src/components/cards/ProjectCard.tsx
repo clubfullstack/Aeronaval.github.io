@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectCardStyles, TextStyles } from "../styles/styles";
+import { ProjectCardStyles, TextStyles } from "../../styles/styles";
 import TechCard from "./TechCard";
 
 interface ProjectCardProps {
@@ -12,17 +12,17 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, imgUrl, icons }) => {
   return (
     <div className={ProjectCardStyles.container}>
-      <img src={imgUrl} alt={name} className={ProjectCardStyles.image} />
+      {/* <img src={imgUrl} alt={name} className={ProjectCardStyles.image} /> */}
       <div className={ProjectCardStyles.textContainer}>
         <h3 className={`mb-2 ${TextStyles.subTitle}`}>{name}</h3>
         <p className={`drop-shadow-[0_35px_35px_rgba(0,0,0,0.99)] ${TextStyles.paragraph}`}>
           {description}
         </p>
-      </div>
       <div className={ProjectCardStyles.iconsContainer}>
         {icons.map((tech, index) => (
           <TechCard key={index} icon={tech.icon} label={tech.label} index={index} />
         ))}
+      </div>
       </div>
     </div>
   );

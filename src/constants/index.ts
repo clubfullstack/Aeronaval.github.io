@@ -13,10 +13,10 @@ interface Navlink {
 export const navLinks: Navlink[] = [
     {id: "home", title: "Início"},
     {id: "about", title: "Sobre"},
-    {id: "services", title: "Serviços"},
     {id: "projects", title: "Projetos"},
-    {id: "contact", title: "Contato"},
+    {id: "services", title: "Serviços"},
     {id: "consulting", title: "Consultoria"},
+    {id: "contact", title: "Contato"},
 ];
 
 export const projects: Project[] = [
@@ -24,7 +24,7 @@ export const projects: Project[] = [
       name: "ANV-PAX",
       description:
         "O ANV-PAX é um hovercraft projetado para o transporte de passageiros e carga, com capacidade de 2700 kg. Com um suporte logístico cuidadosamente planejado, ele oferece versatilidade, robustez, segurança e alta disponibilidade para operadores que buscam expandir seus negócios. Sua estrutura foi desenvolvida para atender às exigências das Normas da Autoridade Marítima, integrando soluções consagradas nos setores naval e aeroespacial.",
-      imgUrl: "src/assets/hovercraft-bg-2.jpeg",
+      imgUrl: "",
       icons : [
         {icon: "src/assets/speed-icon.png", label: "Velocidade"},
         {icon: "src/assets/maintenance-icon.png", label: "Manutenibilidade"},
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     {
         name:"ANV-SAR",
         description: "O ANV-SAR é um hovercraft inovador, projetado para equipes de resgate dos Corpos de Bombeiros, oferecendo modularidade e portabilidade excepcionais. Ideal para situações críticas como enchentes e rompimentos de barragens, ele proporciona transporte fácil e segurança máxima, garantindo uma resposta ágil e eficaz em em situações críticas e emergenciais.",
-        imgUrl: "src/assets/hovercraft-bg.jpeg",
+        imgUrl: "",
         icons: [
           {icon: "src/assets/modularity-icon.png", label: "Modularidade"},
           {icon: "src/assets/forklift-icon.png", label: "Portabilidade"},
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     {
         name:"Tecido tecnológico PlasmaTex",
         description: "Doenças transmitidas por mosquitos, como a dengue, são um problema crescente no Brasil e no mundo. A Aeronaval está revolucionando a proteção contra doenças transmitidas por mosquitos, com uma tecnologia de plasma frio que incorpora repelentes diretamente em tecidos. Esses materiais tratados oferecem uma defesa eficaz e prática para roupas esportivas, uniformes e fardas. Além de atender setores de defesa e civil, estamos impulsionando a inovação para futuras aplicações aeroespaciais.",
-        imgUrl: "src/assets/fabric-bg.jpg",
+        imgUrl: "",
         icons: [
           {icon: "src/assets/shirt-icon.png", label: "Vestuário Inovador"},
           {icon: "src/assets/mesh-icon.png", label: "Tecido Tecnológico"},

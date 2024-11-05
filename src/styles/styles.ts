@@ -1,3 +1,5 @@
+import { useDeviceType } from "../utils/DevicesTypes";
+
 const HeaderStyles = {
   header: "p-4 w-full fixed top-0 left-0 z-50 transition-all duration-300",
   background: "bg-gradient-to-r from-[#040712] via-[#111b3f] to-white",
@@ -68,7 +70,7 @@ const ProjectsStyles = {
     paragraph: "text-white text-lg leading-relaxed",
   },
 
-  // Novo estilo para os botões
+  // Button styles
   toggleButton: `
     bg-gradient-to-r from-[#1F316F] to-[#3450A1] 
     text-white text-xl font-semibold 
@@ -129,6 +131,44 @@ const ContactStyles = {
   input: "text-black p-3 m-1 border border-[#26375b] rounded bg-gray-300 focus:outline-none focus:ring-2 focus:[#2a4884]",
   textarea: "text-black p-3 m-1 border border-[#26375b] bg-gray-300 rounded resize-none h-32 focus:outline-none focus:ring-2 focus:[#2a4884]",
   button: "self-center mt-4 p-2 w-full bg-[#001863] text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500",
+};
+
+export const TechCardStyles = () => {
+  const { isMobile } = useDeviceType();
+
+  return {
+    container: `p-3`,
+    card: `
+      ${isMobile ? "w-[120px] h-[120px] min-w-[100px]" : "w-[155px] h-[155px] min-w-[150px]"}
+      bg-gradient-to-r from-[#004e78] via-[#045f8a] via-[#09709c] via-[#0d80ae] to-[#1191c0]
+      p-[3px]
+      rounded-[15px]
+      shadow-card
+      flex
+      flex-col
+      items-center
+      justify-center
+    `,
+    innerCard: `
+      bg-gray-200
+      rounded-[15px]
+      p-4
+      flex
+      flex-col
+      items-center
+      justify-center
+      bg-opacity-95
+      ${isMobile ? "w-[110px] h-[110px]" : "w-[150px] h-[150px]"}
+    `,
+    icon: `${isMobile ? "w-12 h-12" : "w-16 h-16"} object-contain mb-2`,
+    label: `
+      text-black
+      ${isMobile ? "text-[12px]" : "text-[14px]"}
+      font-bold
+      text-center
+      w-full
+    `,
+  };
 };
 
 export {

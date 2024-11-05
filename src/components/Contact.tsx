@@ -15,8 +15,11 @@ const Contact: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    sendEmail(e, formData.name, formData.email, formData.message);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const success = await sendEmail(e, formData.name, formData.email, formData.message);
+    if (success) {
+      setFormData({ name: '', email: '', message: '' });
+    }
   };
 
   return (

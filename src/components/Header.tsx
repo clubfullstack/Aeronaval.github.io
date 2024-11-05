@@ -44,12 +44,12 @@ const Header: React.FC = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setActivate(id);
-    setMobileMenuOpen(false); // Fecha o menu mobile após clicar
+    setMobileMenuOpen(false); // Close mobile menu after clicking
   };
 
   const toggleMobileMenu = (event: React.MouseEvent) => {
-    event.preventDefault(); // Impede o comportamento padrão do botão
-    setMobileMenuOpen(!isMobileMenuOpen); // Alterna a visibilidade do menu mobile
+    event.preventDefault(); // Remove default behavior
+    setMobileMenuOpen(!isMobileMenuOpen); // Change state to open/close mobile menu
   };
 
   const renderLogo = () => {
@@ -92,14 +92,14 @@ const Header: React.FC = () => {
     <nav className={`${HeaderStyles.header} ${scrolling ? HeaderStyles.scrollBackground : HeaderStyles.background} ${isHeaderVisible ? HeaderStyles.visible : HeaderStyles.hidden}`}>
       <div className="max-w-screen-2xl flex items-center justify-between mx-auto px-4">
         {renderLogo()}
-        {/* Botão de menu mobile */}
+        {/* Mobile button */}
         <button onClick={toggleMobileMenu} className={HeaderStyles.mobileMenuButton}>
           <svg className={HeaderStyles.menuIcon} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
 
-        {/* Menu mobile em coluna */}
+        {/* Mobile colum*/}
         {isMobileMenuOpen && (
           <div className="absolute top-0 right-0 z-50 bg-[#111b3f] rounded-xl p-4">
             <button onClick={toggleMobileMenu} className="bg-transparent absolute top-0 right-0">

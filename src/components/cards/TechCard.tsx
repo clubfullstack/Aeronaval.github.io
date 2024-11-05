@@ -1,6 +1,7 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
+import { useDeviceType } from "../../utils/DevicesTypes";
 
 interface TechCardProps {
   icon: string;
@@ -23,14 +24,16 @@ const fadeIn = (direction: string, type: string, delay: number, duration: number
 });
 
 const TechCard: React.FC<TechCardProps> = ({ icon, label, index }) => {
+  const { isMobile } = useDeviceType();
+
   return (
     <Tilt className="p-3">
       <motion.div
         variants={fadeIn("right", "spring", 0.2 * index, 2)}
         initial="hidden"
         animate="show"
-        className="
-          w-full
+        className={`
+          ${isMobile ? "w-[120px] h-[120px] min-w-[100px]" : "w-[155px] h-[155px] min-w-[150px]"}
           bg-gradient-to-r from-[#004e78] via-[#045f8a] via-[#09709c] via-[#0d80ae] to-[#1191c0]
           p-[3px]
           rounded-[15px]
@@ -39,14 +42,10 @@ const TechCard: React.FC<TechCardProps> = ({ icon, label, index }) => {
           flex-col
           items-center
           justify-center
-          w-[155px]
-          h-[155px]
-          min-w-[150px]
-          
-        "
+        `}
       >
         <div
-          className="
+          className={`
             bg-gray-200
             rounded-[15px]
             p-4
@@ -55,20 +54,17 @@ const TechCard: React.FC<TechCardProps> = ({ icon, label, index }) => {
             items-center
             justify-center
             bg-opacity-95
-            w-full
-            h-full
-            w-[150px]
-            h-[150px]
-          "
+            ${isMobile ? "w-[110px] h-[110px]" : "w-[150px] h-[150px]"}
+          `}
         >
-          <img src={icon} alt={label} className="w-16 h-16 object-contain mb-2" />
-          <h3 className="
+          <img src={icon} alt={label} className={`${isMobile ? "w-12 h-12" : "w-16 h-16"} object-contain mb-2`} />
+          <h3 className={`
             text-black
-            text-[14px]
+            ${isMobile ? "text-[12px]" : "text-[14px]"}
             font-bold
             text-center
             w-full
-          ">
+          `}>
             {label}
           </h3>
         </div>

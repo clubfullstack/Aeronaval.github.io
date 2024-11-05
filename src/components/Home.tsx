@@ -1,6 +1,6 @@
 import React from 'react';
 // import LogoCircular from '../assets/logo-circular.png';
-import BackgroundImage from '../assets/iss042e013697~orig.jpg';  // Importe a imagem
+import BackgroundImage from '../assets/iss042e013697~orig.jpg';
 import { SectionWrapper } from '../hoc';
 import { HomeStyles, TextStyles } from '../styles/styles';
 

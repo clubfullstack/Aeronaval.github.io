@@ -7,7 +7,6 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import About from './components/About';
-import TechInfo from './components/TechInfo';
 import ConsultingDetails from './components/ConsultingDetails';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <Home idName="home"/>
           <About idName="about" />
           <Projects idName="projects" />
-          {/* <TechInfo idName="techInfo" /> */}
           <Services idName="services" />
           <ConsultingDetails idName="consulting" />
           <Contact idName="contact" />

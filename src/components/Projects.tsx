@@ -2,17 +2,16 @@ import React, { useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { useDeviceType } from "../utils/DevicesTypes";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "./cards/ProjectCard";
 import { ProjectsStyles, TextStyles } from "../styles/styles";
 
 const Projects: React.FC = () => {
   const { isMobile } = useDeviceType();
 
-  // Estados para controlar a visibilidade dos cards
   const [isHovercraftVisible, setHovercraftVisible] = useState(false);
   const [isPlasmaTexVisible, setPlasmaTexVisible] = useState(false);
 
-  // Funções para alternar a visibilidade dos cards
+  // Change state to show/hide hovercraft card
   const toggleHovercraftVisibility = () => {
     setHovercraftVisible(!isHovercraftVisible);
   };
@@ -29,7 +28,7 @@ const Projects: React.FC = () => {
         </h1>
       </div>
 
-      {/* Botão para Hovercraft */}
+      {/* Hovercraft button */}
     <div className={ProjectsStyles.buttonContainer}>
       <button
         onClick={toggleHovercraftVisibility}
@@ -38,7 +37,7 @@ const Projects: React.FC = () => {
       </button>
     </div>
 
-      {/* Exibe o card com o texto sobre Hovercraft se o estado for true */}
+      {/* Show card if state was true */}
       {isHovercraftVisible && (
         <div className={ProjectsStyles.hoverSection.container}>
           <p className={ProjectsStyles.hoverSection.paragraph}>
@@ -52,7 +51,7 @@ const Projects: React.FC = () => {
 
 
 
-      {/* Lista dos projetos */}
+      {/* Projects list */}
       <div className={`${ProjectsStyles.projectsList} ${isMobile ? 'flex-col items-center' : 'flex-row justify-center'}`}>
         {projects.map((project, index) => (
           <ProjectCard
@@ -65,7 +64,7 @@ const Projects: React.FC = () => {
         ))}
       </div>
       
-            {/* Botão para PlasmaTex */}
+            {/* PlasmaTex button */}
     <div className={ProjectsStyles.buttonContainer}>
       <button
         onClick={togglePlasmaTexVisibility}
@@ -74,7 +73,7 @@ const Projects: React.FC = () => {
       </button>
     </div>  
 
-      {/* Exibe o card com o texto sobre PlasmaTex se o estado for true */}
+      {/* Show card if state was true */}
       {isPlasmaTexVisible && (
         <div className={ProjectsStyles.hoverSection.container}>
           <p className={ProjectsStyles.hoverSection.paragraph}>

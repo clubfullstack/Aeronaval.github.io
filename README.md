@@ -1,50 +1,89 @@
-# React + TypeScript + Vite
+# Aeronaval GitHub IO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Homepage](aeronavaleng.com.br)
 
-Currently, two official plugins are available:
+## Sumário
+1. [Descrição](#descrição)
+2. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+3. [Estrutura do Projeto](#estrutura-do-projeto)
+4. [Configuração do Ambiente](#configuração-do-ambiente)
+5. [Scripts Disponíveis](#scripts-disponíveis)
+6. [Contribuindo](#contribuindo)
+7. [Notas Finais](#notas-finais)
+8. [Licença](#licença)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descrição
 
-## Expanding the ESLint configuration
+Este projeto é uma aplicação React construída com Vite, utilizando diversas bibliotecas e frameworks para melhorar a experiência do usuário e a eficiência do desenvolvimento. A aplicação é projetada para ser responsiva e fácil de manter, utilizando boas práticas de desenvolvimento.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build rápida para projetos em JavaScript.
+- **Tailwind CSS**: Framework CSS para estilização rápida e responsiva.
+- **Framer Motion**: Biblioteca para animações em React.
+- **React Router**: Para navegação entre páginas.
+- **Three.js**: Biblioteca para gráficos 3D.
+- **EmailJS**: Para envio de emails.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Estrutura do Projeto
+
+A estrutura do projeto é organizada da seguinte forma:
+
+```
+src/
+  ├── assets/ # Imagens e outros ativos estáticos
+  ├── components/ # Componentes reutilizáveis da aplicação
+  ├── constants/ # Valores constantes, textos, etc. 
+    └── index.ts
+  ├── hoc/ # Higher Order Components 
+    ├── index.ts
+    └── SectionWrapper.tsx
+  ├── styles/ # Arquivos de estilização
+  ├── utils/ # Funções utilitárias 
+    ├── DeviceTypes.ts # Responsividade
+    ├── sendMail.ts # Função para envio de e-mails
+    └── validateForm.ts # Função para validação de formulários
+  └── App.tsx # Componente principal da aplicação
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Configuração do Ambiente
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clone o repositório**:
+   ```bash
+   git clone git@github.com:FelipeDN88/Aeronaval.github.io.git
+   cd Aeronaval
+   ```
+
+2. **Instale as dependências**:
+
+   ```bash
+   npm install
+   ```
+3. **Inicie o servidor de desenvolvimento**:
+      ```bash
+   npm run dev
+   ```
+4. **Abra o navegador em http://localhost:5173**:
+
+
+## Scripts Disponíveis
+
+| Script     | Descrição                                           |
+|------------|-----------------------------------------------------|
+| **dev**    | Inicia o servidor de desenvolvimento.               |
+| **build**  | Cria uma versão otimizada da aplicação.             |
+| **lint**   | Executa o ESLint para verificar problemas de estilo de código. |
+| **preview**| Mostra a versão de build da aplicação.              |
+| **predeploy** | Executa o build antes do deploy.                |
+| **deploy** | Publica a aplicação no GitHub Pages.               |
+
+
+## Licença
+
+Este projeto é de propriedade da Aeronaval Engenharia e todos os direitos estão reservados. 
+
+O uso, a reprodução, a modificação ou a distribuição deste produto é estritamente proibido sem autorização prévia por escrito da empresa.
+
+Para mais informações, entre em contato através de felipedavila@aeronaval.org
