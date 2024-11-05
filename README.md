@@ -8,9 +8,7 @@
 3. [Estrutura do Projeto](#estrutura-do-projeto)
 4. [Configuração do Ambiente](#configuração-do-ambiente)
 5. [Scripts Disponíveis](#scripts-disponíveis)
-6. [Contribuindo](#contribuindo)
-7. [Notas Finais](#notas-finais)
-8. [Licença](#licença)
+6. [Licença](#licença)
 
 ## Descrição
 
